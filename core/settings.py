@@ -11,6 +11,18 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
+import os
+
+# BASE_DIR points to the root of your Django project
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Path where collectstatic will copy all static files
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+# URL for accessing static files
+STATIC_URL = '/static/'
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +37,12 @@ SECRET_KEY = 'django-insecure--*m0dv5bkb12f!kv=2rrox2e1+53ptw4ev-y6hzj@f$1lann#g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '136.107.100.236',
+    'localhost',
+    '127.0.0.1',
+]
 
 
 # Application definition
