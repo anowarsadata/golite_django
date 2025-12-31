@@ -13,6 +13,7 @@ urlpatterns = [
     path('ckeditor5/', include('django_ckeditor_5.urls')),
     path('api/blog/', include('apps.blog.api_urls', namespace='blog_api')),
     path('api/products/', include('apps.products.api_urls', namespace='products_api')),
+    path("api/accounts/", include("apps.accounts.urls")),
 ]
 
 if settings.DEBUG:
