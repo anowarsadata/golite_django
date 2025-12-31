@@ -58,8 +58,10 @@ INSTALLED_APPS = [
     'core',
     'apps.blog',
     'apps.products',
+    'apps.accounts',
     'django_ckeditor_5',
     'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -154,4 +156,8 @@ CKEDITOR_5_CONFIGS = {
     }
 }
 
-
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.TokenAuthentication",
+    ]
+}
